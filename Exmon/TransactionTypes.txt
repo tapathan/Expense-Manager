@@ -1,0 +1,39 @@
+Personal
+	Beverages
+		Tea
+		Milk
+		Butter Milk
+		Soft Drink
+	Sweets
+		General
+		Chocolate
+	Junk Food
+		Snacks
+		Chat
+	Gadgets
+		Electronic
+		Electric
+		Personal Care
+		Health Care
+		Liesures
+	Travel Inside City
+		Bus
+		Cab
+		Train
+		Shared Transport
+	Food
+		Breakfast
+		Lunch 
+		Dinner
+	Fruits
+		Healthy
+Household
+ 	Kitchen
+ 		Vegetables
+ 		Electronic Appliances
+ Income 
+ 	Salary
+ 		Incandecent
+ Taxes
+ 	Government
+ 		Income Tax

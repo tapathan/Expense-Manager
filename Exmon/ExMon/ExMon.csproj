@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30CB04F8-DF8C-4BC7-A95F-AE8398CE9036}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExMon</RootNamespace>
+    <AssemblyName>ExMon</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools.Excel.v9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Office, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClsDBScripts.cs" />
+    <Compile Include="CommonFunctions.cs" />
+    <Compile Include="DBConnectionMgr.cs" />
+    <Compile Include="EncryptDecrypt.cs" />
+    <Compile Include="FrmAuthorInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAuthorInfo.Designer.cs">
+      <DependentUpon>FrmAuthorInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChangeTransactionTypeCorD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangeTransactionTypeCorD.Designer.cs">
+      <DependentUpon>FrmChangeTransactionTypeCorD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChoosePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChoosePassword.Designer.cs">
+      <DependentUpon>FrmChoosePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompareTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompareTransactions.Designer.cs">
+      <DependentUpon>FrmCompareTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreateFromGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateFromGroups.Designer.cs">
+      <DependentUpon>FrmCreateFromGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreateNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateNewUser.Designer.cs">
+      <DependentUpon>FrmCreateNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDeleteUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDeleteUser.Designer.cs">
+      <DependentUpon>FrmDeleteUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDimGeneric.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDimGeneric.Designer.cs">
+      <DependentUpon>FrmDimGeneric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDimType1Generic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDimType1Generic.Designer.cs">
+      <DependentUpon>FrmDimType1Generic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEnterSeason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEnterSeason.Designer.cs">
+      <DependentUpon>FrmEnterSeason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExchangeRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExchangeRate.Designer.cs">
+      <DependentUpon>FrmExchangeRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFront.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFront.Designer.cs">
+      <DependentUpon>FrmFront.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGenCreateSearchFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGenCreateSearchFrm.Designer.cs">
+      <DependentUpon>FrmGenCreateSearchFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGenSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGenSearch.Designer.cs">
+      <DependentUpon>FrmGenSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInitialSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInitialSetup.Designer.cs">
+      <DependentUpon>FrmInitialSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIntro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIntro.Designer.cs">
+      <DependentUpon>FrmIntro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLocation.Designer.cs">
+      <DependentUpon>FrmLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMajorEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMajorEvents.Designer.cs">
+      <DependentUpon>FrmMajorEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMDIMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMDIMain.Designer.cs">
+      <DependentUpon>FrmMDIMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNewTrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNewTrans.Designer.cs">
+      <DependentUpon>FrmNewTrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRemoveAssets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRemoveAssets.Designer.cs">
+      <DependentUpon>FrmRemoveAssets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRepeatingTrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRepeatingTrans.Designer.cs">
+      <DependentUpon>FrmRepeatingTrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelectAssetType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelectAssetType.Designer.cs">
+      <DependentUpon>FrmSelectAssetType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSpecialPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSpecialPeriod.Designer.cs">
+      <DependentUpon>FrmSpecialPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTransactionType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTransactionType.Designer.cs">
+      <DependentUpon>FrmTransactionType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUploadXls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUploadXls.Designer.cs">
+      <DependentUpon>FrmUploadXls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAuthorInfo.resx">
+      <DependentUpon>FrmAuthorInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangeTransactionTypeCorD.resx">
+      <DependentUpon>FrmChangeTransactionTypeCorD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChoosePassword.resx">
+      <DependentUpon>FrmChoosePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompareTransactions.resx">
+      <DependentUpon>FrmCompareTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateFromGroups.resx">
+      <DependentUpon>FrmCreateFromGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateNewUser.resx">
+      <DependentUpon>FrmCreateNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDeleteUser.resx">
+      <DependentUpon>FrmDeleteUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDimGeneric.resx">
+      <DependentUpon>FrmDimGeneric.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDimType1Generic.resx">
+      <DependentUpon>FrmDimType1Generic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEnterSeason.resx">
+      <DependentUpon>FrmEnterSeason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExchangeRate.resx">
+      <DependentUpon>FrmExchangeRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFront.resx">
+      <DependentUpon>FrmFront.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGenCreateSearchFrm.resx">
+      <DependentUpon>FrmGenCreateSearchFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGenSearch.resx">
+      <DependentUpon>FrmGenSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInitialSetup.resx">
+      <DependentUpon>FrmInitialSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIntro.resx">
+      <DependentUpon>FrmIntro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLocation.resx">
+      <DependentUpon>FrmLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMajorEvents.resx">
+      <DependentUpon>FrmMajorEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMDIMain.resx">
+      <DependentUpon>FrmMDIMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNewTrans.resx">
+      <DependentUpon>FrmNewTrans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRemoveAssets.resx">
+      <DependentUpon>FrmRemoveAssets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRepeatingTrans.resx">
+      <DependentUpon>FrmRepeatingTrans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelectAssetType.resx">
+      <DependentUpon>FrmSelectAssetType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSpecialPeriod.resx">
+      <DependentUpon>FrmSpecialPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTransactionType.resx">
+      <DependentUpon>FrmTransactionType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUploadXls.resx">
+      <DependentUpon>FrmUploadXls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DBConnection.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IcnSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IcnSearch.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graphite_Backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-download-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open_safety_box_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open_safety_box_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1483809088_FilesFolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1483809062_Treasure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1483809051_PaperMoney.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treasure-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repeat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repeat 48-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExMon Logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
